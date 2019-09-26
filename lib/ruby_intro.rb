@@ -26,15 +26,19 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  "Hello, #{name}"
 end
 
-def starts_with_consonant? s
-  # YOUR CODE HERE
+def starts_with_consonant?(s)
+  return false if s == '' || !('A'..'Z').include?(s[0].upcase) || %w[A E I O U].include?(s[0].upcase)
+
+  true
 end
 
-def binary_multiple_of_4? s
-  # YOUR CODE HERE
+def binary_multiple_of_4?(s)
+  return false if s == '' || s.gsub(/[01]/, '') != '' || s.to_i(2) % 4 != 0
+
+  true
 end
 
 # Part 3
